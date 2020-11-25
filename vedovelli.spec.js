@@ -12,7 +12,7 @@ jest
  * nunca é executado. Mas ele pode ser testado.
  */
 describe("getServerSideProps", () => {
-  it("should call Axios.get 1 time", async () => {
+  it("should call Axios.get 1 time and return props.repos", async () => {
     const { props } = await getServerSideProps();
 
     expect(Axios.get).toHaveBeenCalledTimes(1);
